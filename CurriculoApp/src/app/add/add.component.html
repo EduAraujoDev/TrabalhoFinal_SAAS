@@ -1,3 +1,21 @@
-<p>
-  add works!
-</p>
+<div>
+	<div class="form-group">
+		<label for="nome">Resumo de habilidades</label>
+		<input type="text" class="form-control" [(ngModel)]="curriculo.skill_summary" id="skill_summary" required placeholder="Digite o Resumo de habilidades...">
+	</div>
+	<div class="form-group">
+		<label for="nome">Escolaridade</label>
+		<input type="text" class="form-control" [(ngModel)]="curriculo.formal_education" id="formal_education" required placeholder="Digite a Escolaridade...">
+	</div>
+	<div class="form-group">
+		<label for="nome">Competências</label>
+		<input type="text" class="form-control" [(ngModel)]="curriculo.competencies" id="competencies" required placeholder="Digite as Competências...">
+	</div>
+	<div class="form-group">
+		<label for="nome">Experiências</label>
+		<input type="text" class="form-control" [(ngModel)]="curriculo.work_experience" id="competencies" required placeholder="Digite as Experiências...">
+	</div>
+	<div class="form-group">
+		<button class="btn btn-primary" (click)="save()">Salvar curriculo</button>
+	</div>
+</div>	

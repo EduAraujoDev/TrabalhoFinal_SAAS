@@ -10,6 +10,7 @@ export class Curriculo {
 		this.id = i;
 		this.id_user = iu;
 		this.skill_summary = s;
+		this.competencies = c;
 		this.formal_education = f;
 		this.work_experience = w;
 	}
