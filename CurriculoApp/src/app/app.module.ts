@@ -5,6 +5,8 @@ import { HttpModule } from '@angular/http';
 import { RoutingModule } from './routing/routing.module';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
+import { CurriculoService } from './curriculo.service';
+
 import { AppComponent } from './app.component';
 import { AddComponent } from './add/add.component';
 
@@ -20,7 +22,7 @@ import { AddComponent } from './add/add.component';
 		RoutingModule,
 		NgbModule.forRoot()
   	],
-  	providers: [],
+  	providers: [CurriculoService],
   	bootstrap: [AppComponent]
 })
 export class AppModule { }
