@@ -1,25 +1,60 @@
 <div>
-	<div class="form-group">
-		<label for="nome">Nome completo</label>
-		<input type="text" class="form-control" [(ngModel)]="usuario.nome" id="nome" required placeholder="Digite o nome completo...">
+	<div class="panel panel-default">
+		<div class="panel-heading">Dados de acesso</div>
+		<div class="panel-body">
+			<div class="form-group">
+				<label for="nome">Usuario</label>
+				<input type="text" class="form-control" [(ngModel)]="usuario.usuario" id="usuario" required placeholder="Digite o usuário para acesso...">
+			</div>
+			<div class="form-group">
+				<label for="nome">Senha</label>
+				<input type="password" class="form-control" [(ngModel)]="usuario.senha" id="senha" required placeholder="Digite a senha...">
+			</div>			
+		</div>
 	</div>
-	<div class="form-group">
-		<label for="nome">Resumo de habilidades</label>
-		<input type="text" class="form-control" [(ngModel)]="curriculo.skill_summary" id="skill_summary" required placeholder="Digite o Resumo de habilidades...">
+	<div class="panel panel-default">
+		<div class="panel-heading">Dados pessoais</div>
+		<div class="panel-body">
+			<div class="form-group">
+				<label for="nome">Nome completo</label>
+				<input type="text" class="form-control" [(ngModel)]="usuario.nome" id="nome" required placeholder="Digite o nome completo...">
+			</div>
+			<div class="form-group">
+				<label for="nome">Email</label>
+				<input type="text" class="form-control" [(ngModel)]="usuario.email" id="email" required placeholder="Digite o email...">
+			</div>
+			<div class="form-group">
+				<label for="nome">Telefone</label>
+				<input type="text" class="form-control" [(ngModel)]="usuario.telefone" id="telefone" required placeholder="Digite o telefone...">
+			</div>
+			<div class="form-group">
+				<label for="nome">Endereço</label>
+				<input type="text" class="form-control" [(ngModel)]="usuario.endereco" id="endereco" required placeholder="Digite o endereço...">
+			</div>
+		</div>
 	</div>
-	<div class="form-group">
-		<label for="nome">Escolaridade</label>
-		<input type="text" class="form-control" [(ngModel)]="curriculo.formal_education" id="formal_education" required placeholder="Digite a Escolaridade...">
-	</div>
-	<div class="form-group">
-		<label for="nome">Competências</label>
-		<input type="text" class="form-control" [(ngModel)]="curriculo.competencies" id="competencies" required placeholder="Digite as Competências...">
-	</div>
-	<div class="form-group">
-		<label for="nome">Experiências</label>
-		<input type="text" class="form-control" [(ngModel)]="curriculo.work_experience" id="competencies" required placeholder="Digite as Experiências...">
-	</div>
-	<div class="form-group">
-		<button class="btn btn-primary" (click)="save()">Salvar curriculo</button>
+	<div class="panel panel-default">
+		<div class="panel-heading">Dados profissional</div>
+		<div class="panel-body">
+			<div class="form-group">
+				<label for="nome">Resumo de habilidades</label>
+				<input type="text" class="form-control" [(ngModel)]="curriculo.skill_summary" id="skill_summary" required placeholder="Digite o Resumo de habilidades...">
+			</div>
+			<div class="form-group">
+				<label for="nome">Escolaridade</label>
+				<input type="text" class="form-control" [(ngModel)]="curriculo.formal_education" id="formal_education" required placeholder="Digite a Escolaridade...">
+			</div>
+			<div class="form-group">
+				<label for="nome">Competências</label>
+				<input type="text" class="form-control" [(ngModel)]="curriculo.competencies" id="competencies" required placeholder="Digite as Competências...">
+			</div>
+			<div class="form-group">
+				<label for="nome">Experiências</label>
+				<input type="text" class="form-control" [(ngModel)]="curriculo.work_experience" id="competencies" required placeholder="Digite as Experiências...">
+			</div>
+			<div class="form-group">
+				<button class="btn btn-primary" (click)="save()">Salvar curriculo</button>
+			</div>
+		</div>
 	</div>
 </div>	
