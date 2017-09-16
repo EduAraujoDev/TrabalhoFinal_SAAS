@@ -7,6 +7,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 import { CurriculoService } from './curriculo.service';
 import { UsuarioService } from './usuario.service';
+import { RoleService } from './role.service';
 
 import { AppComponent } from './app.component';
 import { AddComponent } from './add/add.component';
@@ -23,7 +24,7 @@ import { AddComponent } from './add/add.component';
 		RoutingModule,
 		NgbModule.forRoot()
   	],
-  	providers: [CurriculoService, UsuarioService],
+  	providers: [CurriculoService, UsuarioService, RoleService],
   	bootstrap: [AppComponent]
 })
 export class AppModule { }
