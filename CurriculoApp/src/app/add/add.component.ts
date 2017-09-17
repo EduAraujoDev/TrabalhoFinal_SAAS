@@ -25,6 +25,8 @@ export class AddComponent implements OnInit {
 	
 	save(): void {
 		this.curriculoService.save(this.curriculo);
-		this.usuarioService.save(this.usuario);
+		this.usuarioService
+			.save(this.usuario)
+			.subscribe(r => console.log('salvo!!!' + JSON.stringify(this.usuario)));
 	}
 }
