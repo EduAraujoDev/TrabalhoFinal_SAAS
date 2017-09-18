@@ -22,11 +22,21 @@ export class UsuarioService {
 		return headers;
 	}
 
-	save(usuario: Usuario) : Observable<Response> {
-		console.log(usuario);
-
+	save(usuario: Usuario) : Observable<Usuario> {
 		return this
 			.http
-			.post(this.baseUrl + "/usuario", JSON.stringify(usuario), {headers: this.getHeaders()});
+			.post(this.baseUrl + "/usuario", JSON.stringify(usuario), {headers: this.getHeaders()})
+			.map(mapUsuario);
 	}
+}
+
+function toUsuario(r: any): Usuario {
+	let usuario = <Usuario>({
+		id: Number.parseInt(r.id),
+	});
+	return usuario;
+}
+
+function mapUsuario(response: Response): Usuario {
+	return toUsuario(response.json());
 }
