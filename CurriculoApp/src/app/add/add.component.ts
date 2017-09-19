@@ -14,6 +14,7 @@ import { Role } from '../role';
 })
 
 export class AddComponent implements OnInit {
+	isLoading: boolean = true;
 	curriculo: Curriculo;
 	usuario: Usuario;
 	usuarioRet: Usuario;
@@ -31,11 +32,6 @@ export class AddComponent implements OnInit {
 		this.usuario.regra = new Role(1, "");
 		this.curriculo.usuario = this.usuario;
 
-		this.usuarioService
-			.save(this.usuario)
-			.subscribe(result => this.usuarioRet.id = result.id);
-		
-		this.curriculo.usuario.id = this.usuarioRet.id;
 		this.curriculoService
 			.save(this.curriculo)
 			.subscribe(r => console.log('salvo!!!! ' + JSON.stringify(this.curriculo)));

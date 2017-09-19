@@ -21,10 +21,12 @@ export class UsuarioService {
 	}
 
 	save(usuario: Usuario) : Observable<Usuario> {
-		return this
+		let usuarioRet = this
 			.http
 			.post(this.baseUrl + "/usuario", JSON.stringify(usuario), {headers: this.getHeaders()})
 			.map(mapUsuario);
+
+		return usuarioRet;
 	}
 }
 
@@ -32,6 +34,7 @@ function toUsuario(r: any): Usuario {
 	let usuario = <Usuario>({
 		id: Number.parseInt(r.id),
 	});
+	console.log("Usuario cadastrdo " + usuario.id);
 	return usuario;
 }
 
