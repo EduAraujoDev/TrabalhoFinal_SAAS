@@ -11,11 +11,13 @@ import { RoleService } from './role.service';
 
 import { AppComponent } from './app.component';
 import { AddComponent } from './add/add.component';
+import { ListComponent } from './list/list.component';
 
 @NgModule({
 	declarations: [
 		AppComponent,
-		AddComponent
+		AddComponent,
+		ListComponent
   	],
   	imports: [
     	BrowserModule,

@@ -13,10 +13,10 @@ public class Usuario {
 
     @ManyToOne
     @JoinColumn(name = "ID_REGRA")
-    @JsonBackReference
     private Regra regra;
 
     @OneToOne(mappedBy = "usuario")
+    @JsonBackReference
     private Curriculo curriculo;
 
     private String usuario;

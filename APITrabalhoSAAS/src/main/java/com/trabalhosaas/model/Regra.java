@@ -1,5 +1,7 @@
 package com.trabalhosaas.model;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
+
 import javax.persistence.*;
 import java.util.HashSet;
 import java.util.Set;
@@ -20,6 +22,7 @@ public class Regra {
     private String descricao;
 
     @OneToMany(mappedBy = "regra", cascade = CascadeType.ALL)
+    @JsonBackReference
     private Set<Usuario> usuarios = new HashSet<Usuario>();
 
     public int getId() {

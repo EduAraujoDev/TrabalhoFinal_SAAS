@@ -1,0 +1,22 @@
+<div class="table-responsive">
+	<table class="table table-striped">
+		<thead>
+			<tr>
+				<th>id</th>
+				<th>skill_summary</th>
+				<th>competencies</th>
+				<th>formal_education</th>
+				<th>work_experience</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr *ngFor="let curriculo of curriculos">
+				<td>{{curriculo.id}}</td>
+				<td>{{curriculo.skill_summary}}</td>
+				<td>{{curriculo.competencies}}</td>
+				<td>{{curriculo.formal_education}}</td>
+				<td>{{curriculo.work_experience}}</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
