@@ -35,8 +35,9 @@ export class AddComponent implements OnInit {
 			.save(this.usuario)
 			.subscribe(result => this.usuarioRet.id = result.id);
 		
-		console.log(this.usuarioRet.id);
-		/*this.curriculo.usuario.id = this.usuarioRet.id;
-		this.curriculoService.save(this.curriculo);*/
+		this.curriculo.usuario.id = this.usuarioRet.id;
+		this.curriculoService
+			.save(this.curriculo)
+			.subscribe(r => console.log('salvo!!!! ' + JSON.stringify(this.curriculo)));
 	}
 }

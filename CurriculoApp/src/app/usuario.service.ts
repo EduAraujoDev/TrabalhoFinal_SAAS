@@ -6,14 +6,12 @@ import { Role } from './role'
 import { Http, Response, RequestOptions, Headers } from '@angular/http';
 import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/operator/map';
-import 'rxjs/add/observable/forkJoin';
 
 @Injectable()
 export class UsuarioService {
 	private baseUrl: string = 'http://localhost:8080';
 
 	constructor(private http: Http) {
-
 	}
 
 	private getHeaders(){

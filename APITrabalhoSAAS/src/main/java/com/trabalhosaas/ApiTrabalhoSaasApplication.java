@@ -40,7 +40,7 @@ public class ApiTrabalhoSaasApplication implements CommandLineRunner {
 				logger.info("*****Gravando regra: " + regra.getDescricao());
 				regraRepository.save(regra);
 			} else {
-				logger.info("*****Regra: '" + regra.getDescricao() +"' a existe");
+				logger.info("*****Regra: '" + regra.getDescricao() +"' ja existe");
 			}
 		}
 	}
