@@ -13,10 +13,10 @@ public class Curriculo {
     @JoinColumn(name = "id_usuario")
     private Usuario usuario;
 
-    private String skill_summary;
-    private String competencies;
-    private String formal_education;
-    private String work_experience;
+    private String objetivo;
+    private String curso;
+    private String formacao;
+    private String experiencia;
 
     public int getId() {
         return id;
@@ -34,35 +34,35 @@ public class Curriculo {
         this.usuario = usuario;
     }
 
-    public String getSkill_summary() {
-        return skill_summary;
+    public String getObjetivo() {
+        return objetivo;
     }
 
-    public void setSkill_summary(String skill_summary) {
-        this.skill_summary = skill_summary;
+    public void setObjetivo(String objetivo) {
+        this.objetivo = objetivo;
     }
 
-    public String getCompetencies() {
-        return competencies;
+    public String getCurso() {
+        return curso;
     }
 
-    public void setCompetencies(String competencies) {
-        this.competencies = competencies;
+    public void setCurso(String curso) {
+        this.curso = curso;
     }
 
-    public String getFormal_education() {
-        return formal_education;
+    public String getFormacao() {
+        return formacao;
     }
 
-    public void setFormal_education(String formal_education) {
-        this.formal_education = formal_education;
+    public void setFormacao(String formacao) {
+        this.formacao = formacao;
     }
 
-    public String getWork_experience() {
-        return work_experience;
+    public String getExperiencia() {
+        return experiencia;
     }
 
-    public void setWork_experience(String work_experience) {
-        this.work_experience = work_experience;
+    public void setExperiencia(String experiencia) {
+        this.experiencia = experiencia;
     }
 }

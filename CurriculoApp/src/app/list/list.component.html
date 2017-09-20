@@ -3,19 +3,19 @@
 		<thead>
 			<tr>
 				<th>id</th>
-				<th>skill_summary</th>
-				<th>competencies</th>
-				<th>formal_education</th>
-				<th>work_experience</th>
+				<th>Objetivo</th>
+				<th>Cursos</th>
+				<th>Formacao</th>
+				<th>Experiencia</th>
 			</tr>
 		</thead>
 		<tbody>
 			<tr *ngFor="let curriculo of curriculos">
 				<td>{{curriculo.id}}</td>
-				<td>{{curriculo.skill_summary}}</td>
-				<td>{{curriculo.competencies}}</td>
-				<td>{{curriculo.formal_education}}</td>
-				<td>{{curriculo.work_experience}}</td>
+				<td>{{curriculo.objetivo}}</td>
+				<td>{{curriculo.curso}}</td>
+				<td>{{curriculo.formacao}}</td>
+				<td>{{curriculo.experiencia}}</td>
 			</tr>
 		</tbody>
 	</table>
