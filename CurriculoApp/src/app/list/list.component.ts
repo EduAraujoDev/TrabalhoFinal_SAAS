@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 import { CurriculoService } from '../curriculo.service';
 
@@ -13,11 +14,14 @@ import { Curriculo } from '../curriculo';
 export class ListComponent implements OnInit {
 	curriculos: Curriculo[];
 
-	constructor(private curriculoService: CurriculoService) {
-	}
+	constructor(private curriculoService: CurriculoService, private router: Router) {}
 
 	ngOnInit() {
 		this.getCurriculos();
+	}
+
+	add(): void {
+		this.router.navigate(['/add']);
 	}
 
 	getCurriculos(): void {

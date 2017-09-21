@@ -4,6 +4,7 @@ import { Router, ActivatedRoute }	from '@angular/router';
 import { CurriculoService } from '../curriculo.service';
 
 import { Curriculo } from '../curriculo';
+import { Usuario } from '../usuario';
 
 @Component({
 	selector: 'app-view',
@@ -22,6 +23,8 @@ export class ViewComponent implements OnInit {
 		}
 
 	ngOnInit() {
+		this.curriculo = new Curriculo(0, new Usuario(0, null, "", "", "", "", "", ""), "", "", "", "");
+
 		this.sub = this.activatedRoute.params.subscribe(params => {
 			this.id = +params['id'];
 		});

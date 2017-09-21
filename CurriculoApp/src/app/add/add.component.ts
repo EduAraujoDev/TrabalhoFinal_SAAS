@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 import { CurriculoService } from '../curriculo.service';
 import { UsuarioService } from '../usuario.service';
@@ -20,7 +21,8 @@ export class AddComponent implements OnInit {
 	usuarioRet: Usuario;
 	role: Role;
 
-  	constructor(private curriculoService: CurriculoService, private usuarioService: UsuarioService) { }
+	  constructor(private curriculoService: CurriculoService, private usuarioService: UsuarioService, 
+		private router: Router) { }
 
   	ngOnInit() {
 		this.curriculo = new Curriculo(0, null, "", "", "", "");
@@ -35,5 +37,7 @@ export class AddComponent implements OnInit {
 		this.curriculoService
 			.save(this.curriculo)
 			.subscribe(r => console.log('salvo!!!! ' + JSON.stringify(this.curriculo)));
+		
+		this.router.navigate(['/list']);
 	}
 }
