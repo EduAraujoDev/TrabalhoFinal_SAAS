@@ -29,6 +29,17 @@ export class CurriculoService {
 			.map(mapCurriculos);
 		return curriculos;
 	}
+
+	get(id: number): Observable<Curriculo> {
+		let curriculo = this.http
+			.get(this.baseUrl + "/curriculo/" + id,  {headers: this.getHeaders()})
+			.map(mapCurriculo);
+		return curriculo;
+	}
+}
+
+function mapCurriculo(response:Response): Curriculo{
+	return toCurriculo(response.json());
 }
 
 function mapCurriculos(response:Response): Curriculo[]{
@@ -39,10 +50,10 @@ function toCurriculo(r:any): Curriculo{
 	let curriculo = <Curriculo>({
 	  id: parseInt(r.id),
 	  usuario: r.usuario,
-	  skill_summary: r.skill_summary,
-	  competencies: r.competencies,
-	  formal_education: r.formal_education,
-	  work_experience: r.work_experience
+	  objetivo: r.objetivo,
+	  curso: r.curso,
+	  formacao: r.formacao,
+	  experiencia: r.experiencia
 	});
 	console.log('Curriculo: ' + curriculo);
 	return curriculo;

@@ -2,20 +2,20 @@
 	<table class="table table-striped">
 		<thead>
 			<tr>
-				<th>id</th>
+				<th>Id</th>
+				<th>Nome</th>
 				<th>Objetivo</th>
-				<th>Cursos</th>
-				<th>Formacao</th>
-				<th>Experiencia</th>
+				<th></th>
 			</tr>
 		</thead>
 		<tbody>
 			<tr *ngFor="let curriculo of curriculos">
 				<td>{{curriculo.id}}</td>
+				<td>{{curriculo.usuario.nome}}</td>
 				<td>{{curriculo.objetivo}}</td>
-				<td>{{curriculo.curso}}</td>
-				<td>{{curriculo.formacao}}</td>
-				<td>{{curriculo.experiencia}}</td>
+				<td>
+					<button class="view" [routerLink]="['/view', curriculo.id]"><div class="glyphicon glyphicon-eye-open"></div> Visualizar</button>
+				</td>
 			</tr>
 		</tbody>
 	</table>

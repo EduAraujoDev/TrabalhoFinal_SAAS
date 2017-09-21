@@ -17,10 +17,10 @@ export class ListComponent implements OnInit {
 	}
 
 	ngOnInit() {
-		this.getCurriculo();
+		this.getCurriculos();
 	}
 
-	getCurriculo(): void {
+	getCurriculos(): void {
 		this.curriculoService
 			.getAll()
 			.subscribe(r => this.curriculos = r);

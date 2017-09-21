@@ -12,12 +12,14 @@ import { RoleService } from './role.service';
 import { AppComponent } from './app.component';
 import { AddComponent } from './add/add.component';
 import { ListComponent } from './list/list.component';
+import { ViewComponent } from './view/view.component';
 
 @NgModule({
 	declarations: [
 		AppComponent,
 		AddComponent,
-		ListComponent
+		ListComponent,
+		ViewComponent
   	],
   	imports: [
     	BrowserModule,
